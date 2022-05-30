@@ -39,11 +39,18 @@ body{
 }
 .header{
   background: url('./images/banner.webp');
+  /* background: url('https://www.freepik.com/free-psd/pet-shop-banner-template_14568707.htm#query=dog%20banner&position=3&from_view=keyword'); */
   width: 100%;
   height: 100vh;
 }
 a{
   text-decoration: none;
+}
+.logo{
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  padding-top: 22px;
 }
 .cart-icon{
   color: var(--main);
@@ -178,6 +185,10 @@ margin-left: 5px;
   border-right: none;
 
 }
+.footer_logo{
+  width: 50px;
+  padding: 8px;
+}
 .btn-default{
   margin-left: 10px;
   width: 100%;
@@ -198,7 +209,7 @@ margin-left: 5px;
   margin-top: 10px;
   font-size: 10px;
 }
-/* cart */
+
 .cart{
 margin-top: 100px;
 margin-left: 20px;
@@ -230,6 +241,16 @@ margin-top: 10px;
 .summary{
   padding-left: 10px;
   align-items: center;
+
+}
+.T_price{
+  margin-top: -100px!important;
+}
+.T_paisa{
+  margin-top: -100px!important;
+}
+.T_checkout{
+  margin-top: -120px !important;
 }
 .summary__heading{
   background: #f4f6f8;
@@ -243,6 +264,7 @@ margin-top: 10px;
   padding: 15px;
   
 }
+
 .mb-10{
   margin-bottom: 10px;
 }
@@ -257,6 +279,8 @@ margin-top: 10px;
   font-size: 17px;
   text-transform: uppercase;
   text-align: center!important;
+  margin-top: -50px!important;
+  margin-left: 13px!important;
   
 
 }
@@ -270,12 +294,29 @@ margin-top: 10px;
   font-size: bold;
 }
 
+
+.ft{
+
+  background-color:darkblue;
+  margin-top: 210px;
+  
+}
+.empty_cart{
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+ 
+}
+
 @media(max-width:765px){
   .container{
     width: 100%;
     padding: 0 30px;
    
 
+  }
+  .T_paisa{
+    margin-top: -75px!important;
   }
   .cart-icon{
     margin-right: -15px;
@@ -351,6 +392,9 @@ margin-top: 10px;
   width: 100%;
   
 }
+.T_paisa{
+  margin-top: -75px!important;
+}
 .details__image{
     
   padding-right: 0;
@@ -360,4 +404,4 @@ margin-top: 10px;
 .summary__details{
   text-align: center;
 }
-}
+} 

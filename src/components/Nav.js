@@ -11,11 +11,12 @@ const Nav = () => {
                 <div className="nav__container">
                     <div className="nav__left">
                         <Link to="/">
-                        <img src="/images/logo.webp" alt="Logo" />
+                        <img src="/images/furpaaws.jpeg" className='logo' alt="Logo" />
                         </Link>
                          
                     </div>
                     <div className="nav__right">
+                   
                         <Link to="/cart">
                             <div className="basket">
                             <BsFillBagFill className="cart-icon"/>

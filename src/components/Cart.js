@@ -88,7 +88,7 @@ const Cart = () => {
                   Checkout
                 </div>
                 <div className="summary__details">
-                  <div className="row mb-10">
+                  <div className="row mb-10 T_items">
                     <div className="col-6 ">
                       Total Items:
                     </div>
@@ -97,16 +97,16 @@ const Cart = () => {
                     </div>
                       </div>
                       <div className="row mb-10">
-                      <div className="col-6 ">
+                      <div className="col-6 T_price ">
                         Total Price:
                         </div>
-                      <div className="col-6">
+                      <div className="col-6 T_paisa">
                         {currencyFormatter.format(totalPrice,{code:'USD'})}
                       </div>
                     
                   </div>
                   
-             <div className="row">
+             <div className="row T_checkout ">
              <a href="https://rzp.io/l/Dyop7J7xt" class="checkout">Buy Now</a>
              </div>
                 
@@ -117,7 +117,7 @@ const Cart = () => {
             </div>
           </div>
           
-          </>:'Your Cart is Empty'}
+          </>:<p className='empty_cart' >Your Cart is Empty</p>}
         </div>
         </div>
     )
