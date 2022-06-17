@@ -4,6 +4,7 @@ import currencyFormatter from 'currency-formatter';
 import{BsDash,BsPlus}from "react-icons/bs";
 import { BsTrash } from "react-icons/bs";
 
+
 const Cart = () => {
  
   const {products, totalQuantities,totalPrice}=useSelector(state => state.CartReducer);
@@ -21,7 +22,7 @@ const Cart = () => {
               <div className="cart__heading">
                 <div className="row">
                   <div className="col-2">
-                    Picture
+                    Product
                   </div>
                   <div className="col-2">
                     Name
@@ -50,7 +51,8 @@ const Cart = () => {
                       </div>
                       <div className="col-2">
                         <div className="cart__name">
-                          {product.name}
+                          {/* {product.name} */}
+                          Pet Feeder
                           </div>
                         </div>
                         <div className="col-2">
@@ -107,7 +109,8 @@ const Cart = () => {
                   </div>
                   
              <div className="row T_checkout ">
-             <a href="https://rzp.io/l/Dyop7J7xt" class="checkout">Buy Now</a>
+             <a href="https://rzp.io/l/Dyop7J7xt" class="checkout">Checkout</a>
+             {/* <div className=""><Googlepay/></div> */}
              </div>
                 
                 </div>

@@ -3,6 +3,14 @@ import {useParams}from "react-router-dom";
 import{useDispatch , useSelector} from "react-redux";
 import currencyFormatter from 'currency-formatter';
 import{BsDash,BsPlus}from "react-icons/bs";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Slider from "react-slick";
+import { CardActionArea } from '@mui/material';
+import { CardActions } from '@material-ui/core';
 
 
 const Details = () => {
@@ -20,8 +28,59 @@ const Details = () => {
            setQuantity(quantity-1);
        }
    }
+
+   var settings = {
+
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+   const useStyles = makeStyles({
+    root: {
+      maxWidth: 350,
+      margin: 20
+    },
+    media: {
+      height: 200,
+    },
+    content: {
+      height: 150,
+      textAlign: 'center',
+      fontFamily: 'Avenir-Roman',
+      marginLeft: '22px'
+    }
+  });
+  const classes = useStyles();
     return (
-        <div className="container mt-100">
+        <div style={{marginTop:'150px'}} className="container mt-100">
             <div className="row">
                 <div className="col-6">
                     <div className="details__image">
@@ -55,14 +114,102 @@ const Details = () => {
                     <p>Bank Offer5% off on ICICI Bank Cards, up to $1. On orders of $5 and aboveT&C</p>
                     <p>Bank Offer3% Unlimited Cashback on  Axis Bank Credit CardT&C</p>
                     <br/>
-                    <h3>Services</h3>
+                    {/* <h3>Services</h3>
                     <br/>
                     <p>14 Days Return Policy</p>
-                    <p>Cash on Delivery available</p>
+                    <p>Cash on Delivery available</p> */}
                     
                 </div>
                 </div>
             </div>
+            <div className="detail_items">
+        <h2 className="Desc_text"> Description</h2>
+        <Slider className="slider" {...settings}>
+
+
+          <Card key={1} className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='../images/pic5.jfif'
+                title='card'
+              />
+              <CardContent className={classes.content}>
+
+                <p>
+                  “This is a GREAT little fountain! Soooo easy to assemble, and I love the filter pack that pops in just under the top- keeps the water fresh and the slime at bay!”
+                </p>
+
+              </CardContent>
+            </CardActionArea>
+            <CardActions className="cardaction">
+
+              <div className="user_name">
+                Kimberly Hickerson
+              </div>
+
+            </CardActions>
+          </Card>
+
+          <Card key={1} className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='../images/pic5.jfif'
+                title='card'
+              />
+              <CardContent className={classes.content}>
+
+                <p>
+                  
+     “Works great. Will recommend to anyone looking for an automatic cat feeder. Will be very convenient when going out of town for the weekend.”   
+     
+                </p>
+
+              </CardContent>
+            </CardActionArea>
+            <CardActions className="cardaction">
+
+              <div className="user_name">
+                Rita05
+              </div>
+
+            </CardActions>
+          </Card>
+
+          <Card key={1} className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='../images/pic5.jfif'
+                title='card'
+              />
+              <CardContent className={classes.content}>
+
+                <p>
+                “Dogs are now drinking daily as needed and they seem happy. Thanks for making something so simple and easy.”   
+                </p>
+
+
+
+              </CardContent>
+            </CardActionArea>
+            <CardActions className="cardaction">
+
+              <div className="user_name">
+              Sara D
+              </div>
+
+            </CardActions>
+          </Card>
+
+          
+
+
+
+
+        </Slider>
+      </div>
         </div>
     )
 }

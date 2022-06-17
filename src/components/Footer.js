@@ -7,28 +7,28 @@ const Footer = () => {
  <footer class="text-center ft text-lg-start bg-light text-muted mt-5">
 
   <section
-    class="d-flex  justify-content-center justify-content-lg-between p-3 border-bottom " >
+    class="d-flex  justify-content-center justify-content-lg-between p-4 border-bottom " >
 
     <div class="me-5 d-none d-lg-block ">
       <span>Get connected with us on social networks:</span>
     </div>
    
     <div >
-      <a href="" class="me-4 text-reset">
+      {/* <a href="" class="me-4 text-reset">
         <i class="fab fa-facebook-f"></i>
       </a>
       <a href="" class="me-4 text-reset">
         <i class="fab fa-twitter"></i>
-      </a>
+      </a> */}
     
-      <a href="" class="me-4 text-reset">
+      <a href="https://instagram.com/furpaaws?igshid=YmMyMTA2M2Y=" class="me-4 text-reset">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="" class="me-4 text-reset">
+      <a href="https://www.linkedin.com/in/furpaaws-app-757987241/" class="me-4 text-reset">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
+      <a href="https://in.pinterest.com/furpaaws/_saved/" class="me-4 text-reset">
+      <i class="fab fa-pinterest"></i>
       </a>
     </div>
    
@@ -57,10 +57,10 @@ const Footer = () => {
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">About Us</a>
+            <a href="/about" class="text-reset">About Us</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="/contact" class="text-reset">Contact</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Orders</a>
@@ -76,7 +76,7 @@ const Footer = () => {
           <p><i class="fas fa-home me-3"></i> Shimla Himachal Pradesh,India</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            furpawsapp@gmail.com
           </p>
           <p><i class="fas fa-phone me-3"></i>+ 8329760574 </p>
          
@@ -86,7 +86,7 @@ const Footer = () => {
     </div>
   </section>
  
-  <div class="text-center p-3" style={{backgroundColor:'black'}}>
+  <div class="text-center p-4" style={{backgroundColor:'black'}}>
     © 2023 Copyright:
     <a class="text-reset fw-bold" href="/">furpaaws.com</a>
   </div>
