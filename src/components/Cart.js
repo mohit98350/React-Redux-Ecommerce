@@ -3,19 +3,21 @@ import{useSelector,useDispatch}from "react-redux";
 import currencyFormatter from 'currency-formatter';
 import{BsDash,BsPlus}from "react-icons/bs";
 import { BsTrash } from "react-icons/bs";
+import { useHistory} from "react-router-dom"
 
 
 const Cart = () => {
  
   const {products, totalQuantities,totalPrice}=useSelector(state => state.CartReducer);
  const dispatch = useDispatch();
+const history = useHistory();
  
     return (
       
         <div className="cart">
           
           <div className="container">
-          <h2>My Cart</h2>  
+          <h2 style={{padding:'30px'}}className='mycart'>My Cart</h2>  
           {products.length>0? <>
           <div className="row">
             <div className="col-9">
@@ -120,7 +122,7 @@ const Cart = () => {
             </div>
           </div>
           
-          </>:<p className='empty_cart' >Your Cart is Empty</p>}
+          </>:history.push('/')}
         </div>
         </div>
     )

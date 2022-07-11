@@ -5,7 +5,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0.7em;
+  
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color:silver;
+  outline: 1px solid slategrey;
+  border-radius: 100px;
+}
 :root {
   --white: #fff;
   --black: #000;
@@ -20,7 +37,7 @@ body {
 
 .container {
   width: 1300px;
-  margin: 0 auto;
+ margin: 0 auto;
 }
 
 .nav {
@@ -194,13 +211,17 @@ a {
 
 .details__name {
   font-size: 28px;
-  color: #2c2c2c;
+  text-align: center;
+  background-color: silver;
+  color:'whitesmoke';
+  /* color: #2c2c2c; */
   font-weight: 400;
   text-transform: capitalize;
 }
 
 .details__price {
   margin: 10px 0;
+  text-align: center;
 }
 
 .details__actual {
@@ -235,11 +256,6 @@ a {
 
 }
 
-.footer_logo {
-
-  height: 70px;
-  padding-right: 5px;
-}
 
 .btn-default {
   margin-left: 10px;
@@ -367,7 +383,7 @@ a {
 
 .ft {
 
-  margin-top: 200px !important;
+  margin-top: 140px !important;
 
 }
 
@@ -381,6 +397,12 @@ a {
 .cont {
   position: relative;
 }
+.A_text_overimage{
+  position: absolute;
+  top:25%;
+  left:41%
+}
+
 .text_overimage{
     position: absolute;
     top: 8%;
@@ -468,12 +490,33 @@ p{
   
 }
 .H_btn{
-  margin-left: 350px;
+  margin-left: 100px;
 
     
 }
+.footer_logo {
+  height: 60px;
+  /* align-items: center; */
+  margin-bottom: 5px;
+  margin-left: 10px!important;
+  
   
 
+
+  
+ 
+}
+.f_image2{
+  display: none;
+}  
+
+@media(max-width:1000px){
+  .A_text_overimage{
+   
+    left:31%
+  }
+
+}
 
 
 
@@ -481,6 +524,7 @@ p{
   .container {
     width: 100%;
     padding: 0 30px;
+    margin-left: 12px;
 
 
   }
@@ -490,11 +534,11 @@ p{
   }
 
   .cart-icon {
-    margin-right: -15px;
+    margin-right: 7px;
   }
 
   .basket span {
-    margin-right: 13px;
+    margin-right: 35px;
   }
 
   .col-2 {
@@ -502,20 +546,32 @@ p{
     text-align: center;
     padding: 5px;
   }
+  
+  /* .A_text_overimage{
+  left:50%
+   
+  } */
+  /* .H_btn{
+    margin-left: 90px;
+  }
+
+
+ 
+ 
   .text_overimage{
-    top: 11%!important;
+    top: 8%!important;
     left: 8.5%;
     max-width: 160px;
     transform: translateY(-50%);
 }
 .text {
-  margin-top: 2px;
+  margin-top: 50px;
+  margin-left: 8px;
   font-size: 15px;
   font-family: Avenir-Roman;
  
 
-}
-
+} */
 
   .col-3 {
     width: 50%;
@@ -549,6 +605,12 @@ p{
   .cart__heading {
     display: none;
   }
+  .cart__image{
+    padding-left: 105px!important;
+  }
+  .cart__remove{
+    padding-left: 135px!important;
+  }
 
   .summary-col {
     width: 100% !important;
@@ -568,15 +630,22 @@ p{
   }
 
   .footer_logo {
-    height: 80px;
-    padding-right: 8px;
+    height: 60px;
+    margin-left: 133px!important;
+    margin-bottom: 10px;
+
+    
+   
   }
 
 }
 
-@media(max-width:400px) {
+@media(max-width:420px) {
   .col-3 {
     width: 100%;
+  }
+  .container{
+    padding-right: 6px;
   }
  
   .cols-3{
@@ -584,6 +653,26 @@ p{
   }
   .col-2 {
     width: 100%;
+    
+  }
+  .cart-icon {
+    margin-right: 8px!important;
+  }
+  .mycart{
+    margin-right: 40px;
+  }
+  .empty_cart{
+    margin-right: 20px;
+  }
+  /* .cart__image{
+    padding-left: 102x!important;
+    
+  }  */
+  /* /* .cart__remove{
+    padding-left: 140px!important;
+  } */
+  .basket span {
+    margin-right: 30px!important;
   }
   .btn{
     display: none;
@@ -591,25 +680,33 @@ p{
   }
   .H_btn{
     margin-left: 90px;
+    padding:10px 10px
   }
-  .A_text_overimage{
+  /* .A_text_overimage{
     margin-left: 0!important;
     margin-top: 200px!important;
+  } */
+  .A_text_overimage{
+   
+   
+    left:5%
   }
  
   .text_overimage{
-    top: 8%!important;
+    top: 6%!important;
     left: 8.5%;
     max-width: 160px;
     transform: translateY(-50%);
 }
 .text {
   margin-top: 50px;
+  margin-left: 5px;
   font-size: 15px;
   font-family: Avenir-Roman;
  
 
 }
+
 .user_name{
   padding: 40px;
 }
@@ -641,16 +738,33 @@ p{
   .details__image {
 
     padding-right: 0;
-    padding-left: 60px;
+    padding-left: 50px;
 
+  }
+  .summary-col{
+    margin-left: -12px!important;
   }
 
   .summary__details {
     text-align: center;
   }
-
-  .footer_logo {
-    height: 60px;
-    padding-right: 5px;
+  .f_image1{
+    display: none;
   }
+  .f_image2{
+    display: block;
+  }
+
+  /* .footer_image{
+   width: 360px;
+   height: 400px;
+  } */
+  /* .footer_logo {
+    height: 60px;
+    align-items: center;
+   
+
+    
+   
+  } */
 }

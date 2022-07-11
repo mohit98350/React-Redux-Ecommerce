@@ -10,11 +10,9 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import { Menu as MenuIcon } from "@material-ui/icons";
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-
 
 const pages = ['Product', 'About Us', 'Contact Us'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -23,7 +21,6 @@ const pages = ['Product', 'About Us', 'Contact Us'];
 const Nav = () => {
 
     const history = useHistory();
-  
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
    
@@ -31,9 +28,9 @@ const Nav = () => {
       const handleOpenNavMenu = (event) => {
           setAnchorElNav(event.currentTarget);
       };
-      const handleOpenUserMenu = (event) => {
-          setAnchorElUser(event.currentTarget);
-      };
+    //   const handleOpenUserMenu = (event) => {
+    //       setAnchorElUser(event.currentTarget);
+    //   };
      
   
       const handleCloseNavMenu = (pageurl) => {
@@ -46,39 +43,12 @@ const Nav = () => {
       const handleCloseUserMenu = () => {
           setAnchorElUser(null);
       };
+    
   
     const { totalQuantities } = useSelector(state => state.CartReducer);
     return (
-        // <div className="nav">
-        //     <div className="container">
-
-        //         <div className="nav__container">
-
-        //             <div className="nav__left">
-        //                 <Link to="/">
-        //                     <img src="/images/furpaaws.jpeg" className='logo' alt="Logo" />
-        //                 </Link>
-
-        //             </div>
-                    
-        //                 <div className="nav__right">
-
-        //                     <Link to="/cart">
-        //                         <div className="basket">
-        //                             <BsFillBagFill className="cart-icon" />
-        //                             <span>{totalQuantities}</span>
-        //                         </div>
-        //                     </Link>
-
-
-                        
-        //             </div>
-
-        //         </div>
-
-        //     </div>
-        // </div>
-
+      <>
+       
         <AppBar position="fixed" style={{ background: 'white',height:'100px'}}>
         <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -124,14 +94,15 @@ const Nav = () => {
                         }}
                     >
                        
-                         <MenuItem key={1}  onClick={()=>handleCloseNavMenu('')}>
-                            <Typography textAlign="center">Products</Typography>
-                            </MenuItem>
+                         
                             <MenuItem key={2} onClick={()=>handleCloseNavMenu('/about')}>
                                 <Typography textAlign="center" >About </Typography>
                             </MenuItem>
                             <MenuItem key={3} onClick={()=>handleCloseNavMenu('/contact')}>
                                 <Typography textAlign="center" >Contact </Typography>
+                            </MenuItem>
+                            <MenuItem key={1} >
+                           <a href = "https://www.furpaaws.in/blog"><Typography textAlign="center" style={{color:"black"}} >Blog</Typography></a> 
                             </MenuItem>
                     </Menu>
                 </Box>
@@ -147,23 +118,27 @@ const Nav = () => {
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               
-                    <Button
-                        onClick={()=>handleCloseNavMenu('')}
-                        sx={{fontSize:'16px', my: 2, color: 'black', display: 'block','margin-right':'1rem!important' }}>Products</Button>
+                  
                     <Button onClick={()=>handleCloseNavMenu('/about')}
                         sx={{fontSize:'16px', my: 2, color: 'black', display: 'block','margin-right':'1rem!important' }}>
                             About
                             </Button>
                     <Button onClick={()=>handleCloseNavMenu('/contact')}
                         sx={{fontSize:'16px', my: 2, color: 'black', display: 'block' }}>Contact</Button>
+                         <a href="https://www.furpaaws.in/blog">
+                   <Button
+                        // onClick={()=>handleCloseNavMenu('')}
+                        sx={{fontSize:'16px', my: 2, color: 'black', display: 'block','margin-right':'1rem!important' }}>Blog</Button>
+                   </a>
                 </Box>
 
                 <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="My Cart">
-                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                        <IconButton  sx={{ p: 0 }}>
                         <Link to="/cart">
+                        
                                <div className="basket">
-                                    <BsFillBagFill className="cart-icon" />
+                                    <BsFillBagFill  className="cart-icon" />
                                     <span>{totalQuantities}</span>
                                 </div>
                             </Link>
@@ -182,6 +157,7 @@ const Nav = () => {
                             vertical: 'top',
                             horizontal: 'right',
                         }}
+                        
                         open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
                     >
@@ -198,7 +174,8 @@ const Nav = () => {
             </Toolbar>
         </Container>
     </AppBar>
-
+   
+</>
     )
 }
 

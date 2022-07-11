@@ -60,10 +60,10 @@ const Footer = () => {
             <a href="/about" class="text-reset">About Us</a>
           </p>
           <p>
-            <a href="/contact" class="text-reset">Contact</a>
+            <a href="/contact" class="text-reset">Contact Us</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="/" class="text-reset">Home</a>
           </p>
          
         </div>

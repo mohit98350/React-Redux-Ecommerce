@@ -81,8 +81,8 @@ const Home_body = () => {
             <div className='text_overimage'>
               <div className='text'>
 
-                From muting meowing cats, to slimming down fatty furballs, discover tips, tricks, mysteries, and more here on our blog.
-              </div>
+                From muting meowing cats, to slimming down fatty furballs, discover tips, tricks, mysteries, and more here on our blog..
+                </div>
               <div className='btn'>
                 <a href='https://www.furpaaws.in/blog'>
                 <Button  varient="outlined" > Blog</Button>  
@@ -109,8 +109,8 @@ const Home_body = () => {
 
       <div className="items">
         {/* <h2 className="trending_text"> What people are saying</h2> */}
-        <h3  style={{marginTop:'40px',textAlign:'center'}} className="text-2xl font-bold underline">
-     What people are saying...
+        <h3  style={{marginTop:'40px',textAlign:'center'}} className="text-1xl font-bold underline">
+     What people are saying
     </h3>
         
         <Slider className="slider" style={{ marginTop:'50px'}}{...settings}>
@@ -120,7 +120,7 @@ const Home_body = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='../images/pic5.jfif'
+                image='../images/c1.jpg'
                 title='card'
               />
               <CardContent className={classes.content}>
@@ -144,7 +144,7 @@ const Home_body = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='../images/pic5.jfif'
+                image='../images/c2.jpg'
                 title='card'
               />
               <CardContent className={classes.content}>
@@ -170,7 +170,7 @@ const Home_body = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='../images/pic5.jfif'
+                image='../images/c3.jpg'
                 title='card'
               />
               <CardContent className={classes.content}>
@@ -196,7 +196,7 @@ const Home_body = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='../images/pic5.jfif'
+                image='../images/c4.jpg'
                 title='card'
               />
               <CardContent className={classes.content}>
@@ -220,7 +220,7 @@ const Home_body = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='../images/pic5.jfif'
+                image='../images/c5.jpg'
                 title='card'
               />
               <CardContent className={classes.content}>
@@ -244,7 +244,7 @@ const Home_body = () => {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='../images/pic5.jfif'
+                image='../images/c6.jpg'
                 title='card'
               />
               <CardContent className={classes.content}>
@@ -269,6 +269,19 @@ const Home_body = () => {
 
         </Slider>
       </div>
+
+        <br/>
+        
+      <div className="items">
+        {/* <h2 className="trending_text"> What people are saying</h2> */}
+        <h3  style={{marginTop:'20px',textAlign:'center'}} className="text-1xl font-bold underline">
+     As featured on
+    </h3>
+         <div  style={{marginTop:'60px'}} className="" >
+                       <img  className="f_image1" src='https://cdn.shopify.com/s/files/1/0252/5197/1119/files/lQLPDhtB4CWDCErNAajNCvCwtEMei7wg0yQCPJqOqcBTAA_2800_424.png?v=1648025467'/>
+                       <img  className="f_image2" src='https://cdn.shopify.com/s/files/1/0252/5197/1119/files/PR.png?v=1648545561'/>       
+      </div>
+    </div>
     </div>
 
   )

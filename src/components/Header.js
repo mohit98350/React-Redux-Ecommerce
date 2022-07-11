@@ -10,27 +10,36 @@ const Header = () => {
     return (
         <div className="header">
             {/* <div className='inside_header'> */}
+            <div className='' >
             <div className='A_text_overimage' style={{
-                position: 'absolute',
-                marginTop: '180px',
-                marginLeft: '500px',
+                // position: 'absolute',
+                // top:'25%',
+                // left:'40%'
+                   
+                // marginTop: '180px',
+                // marginLeft: '700px',
+               
 
             }}>
 
                 <div className='text'>
 
 
+                <div className='A_text' >
 
                     <TextAnimation>
-                        <h3 style={{
-                            fontSize: '50px',
+                        <h3  style={{
+                            fontSize: '40px',
                             color:'black',
-                            fontFamily:'revert'
+                            fontFamily:'revert',
+                            marginLeft:'18px'
+                            
                         }}>
-                            Welcome to our website where we feed pets.....
+                            we are  <span style={{color:'tomato'}}>pet friendly..</span>
                         </h3>
 
                     </TextAnimation>
+                    </div>
                     <div className='H_btn'>
                         <Link to={`/details/${1}`}>
                             <Button
@@ -60,7 +69,7 @@ const Header = () => {
             </div>
             <img className='banner_image' src="/images/05.jpg" />
         </div>
-        // </div>
+        </div>
 
     )
 }

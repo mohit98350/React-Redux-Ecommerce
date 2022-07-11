@@ -10,11 +10,11 @@ const initState={
 
         },
         {
-            id:6,name:'Women Skirt ',image:'Product-2png.png',Price:60,discount:'2',
+            id:6,name:'Pet Feeder ',image:'Product-2png.png',Price:60,discount:'2',
             discountPrice:60 - 2/100 * 60, quantity:9, des:"Assured Quality Product"
         },
         {
-            id:10,name:'Women Regular Fit  Shirt',image:'Product-3.png',Price:35,discount:'3',
+            id:10,name:'Pet Feeder',image:'Product-3.png',Price:35,discount:'3',
             discountPrice:35 - 3/100 * 35, quantity:13, des:"Assured Quality Product"
         },
         // {

@@ -80,6 +80,7 @@ const Details = () => {
   });
   const classes = useStyles();
     return (
+      <>
         <div style={{marginTop:'150px'}} className="container mt-100">
             <div className="row">
                 <div className="col-6">
@@ -105,10 +106,10 @@ const Details = () => {
                     <button className="btn-default "onClick={()=>dispatch({type:'ADD_TO_CART',payload:{product,quantity}})}>Add To Cart</button>
                 </div>
                 </div>
-                <div className="details__p">
+                <div style={{textAlign:'center',paddingTop:'10px'}} className="details__p">
                 {product.des}
                 <br/>
-                    <h3>Available Offers</h3>
+                    <h3 style={{textAlign:'center',paddingTop:'15px',color:'black',fontWeight:'600'}}>Available Offers</h3>
                     <br/>
                     <p>Special PriceGet extra 2% off (price inclusive of discount)T&C</p>
                     <p>Bank Offer5% off on ICICI Bank Cards, up to $1. On orders of $5 and aboveT&C</p>
@@ -121,6 +122,7 @@ const Details = () => {
                     
                 </div>
                 </div>
+            </div>
             </div>
             <div className="detail_items">
         <h2 className="Desc_text"> Description</h2>
@@ -137,7 +139,7 @@ const Details = () => {
               <CardContent className={classes.content}>
 
                 <p>
-                  “This is a GREAT little fountain! Soooo easy to assemble, and I love the filter pack that pops in just under the top- keeps the water fresh and the slime at bay!”
+                “Dogs are now drinking daily as needed and they seem happy. Thanks for making something so simple and easy.”   
                 </p>
 
               </CardContent>
@@ -210,7 +212,8 @@ const Details = () => {
 
         </Slider>
       </div>
-        </div>
+       
+        </>
     )
 }
 
