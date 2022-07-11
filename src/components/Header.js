@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import TextAnimation from 'react-animate-text';
+// import TextAnimation from 'react-animate-text';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ const Header = () => {
 
                 <div className='A_text' >
 
-                    <TextAnimation>
+                    {/* <TextAnimation> */}
                         <h3  style={{
                             fontSize: '40px',
                             color:'black',
@@ -35,10 +35,10 @@ const Header = () => {
                             marginLeft:'18px'
                             
                         }}>
-                            we are  <span style={{color:'tomato'}}>pet friendly..</span>
+                            we are  <span style={{color:'tomato'}}>pet friendly....</span>
                         </h3>
 
-                    </TextAnimation>
+                    {/* </TextAnimation> */}
                     </div>
                     <div className='H_btn'>
                         <Link to={`/details/${1}`}>
